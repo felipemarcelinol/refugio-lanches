@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refúgio Lanches | Hambúrguer artesanal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🔥Refúgio Lanches</div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a href="#cardapio" class="botao-header">Fazer pedido</a>
+    </header>
+
+    <section class="inicio" id="inicio">
+        <div class="texto-inicio">
+            <p class="destaque">HAMBÚRGUER ARTESANAL</p>
+
+            <h1>Seu próximo hambúrguer favorito está aqui.</h1>
+
+            <p>
+                Carne suculenta, pão macio e ingredientes selecionados.
+                Tudo preparado na hora para deixar seu dia mais gostoso.
+            </p>
+
+            <a href="#cardapio" class="botao">Conheça nosso cardápio</a>
+
+            <div class="informacoes">
+                <div>
+                    <strong>100%</strong>
+                    <span>Feito na hora</span>
+                </div>
+
+                <div>
+                    <strong>4 opções</strong>
+                    <span>Para experimentar</span>
+                </div>
+
+                <div>
+                    <strong>Desde 2026</strong>
+                    <span>No refúgio, é pertinho!</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="imagem-inicio">
+            <img
+                src="img/principal.jpg"
+                alt="Hambúrguer principal"
+            >
+        </div>
+    </section>
+
+    <section class="cardapio" id="cardapio">
+        <div class="titulo-secao">
+            <p class="destaque">ESCOLHA O SEU FAVORITO</p>
+            <h2>Nosso cardápio</h2>
+        </div>
+
+        <div class="produtos">
+
+            <div class="produto">
+                <img
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+                    alt="Refúgio´s Clasic"
+                >
+
+                <div class="produto-info">
+                    <h3>Refúgio´s Classic</h3>
+                    <p>Pão brioche, 1 hambúrguer, queijo cheddar, alface e molho da casa.</p>
+
+                    <div class="produto-rodape">
+                        <strong>R$ 24,90</strong>
+                        <button onclick="adicionarCarrinho('Brasa Clássico', 24.90)">
+                            + Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img
+                    src="img/duplo.jpg"
+                    alt="Refúgio´s Duplo"
+                >
+
+                <div class="produto-info">
+                    <h3>Refúgio´s Duplo</h3>
+                    <p>Carne bovina, queijo cheddar, bacon crocante e molho barbecue.</p>
+
+                    <div class="produto-rodape">
+                        <strong>R$ 29,90</strong>
+                        <button onclick="adicionarCarrinho('Brasa Bacon', 29.90)">
+                            + Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img
+                    src="img/triplo.jpg"
+                    alt="Refúgio´s Triplo"
+                >
+
+                <div class="produto-info">
+                    <h3>Refúgio´s Triplo</h3>
+                    <p>Dois hambúrgueres, queijo derretido, cebola caramelizada e molho de mostarda.</p>
+
+                    <div class="produto-rodape">
+                        <strong>R$ 34,90</strong>
+                        <button onclick="adicionarCarrinho('Brasa Duplo', 34.90)">
+                            + Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img
+                    src="https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=600&q=80"
+                    alt="Refúgio´s Chicken"
+                >
+
+                <div class="produto-info">
+                    <h3>Refúgio´s Chicken</h3>
+                    <p>Frango crocante, queijo, alface fresca e maionese temperada.</p>
+
+                    <div class="produto-rodape">
+                        <strong>R$ 26,90</strong>
+                        <button onclick="adicionarCarrinho('Brasa Chicken', 26.90)">
+                            + Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="carrinho" id="carrinho">
+        <div>
+            <p class="destaque">SEU PEDIDO</p>
+            <h2>Monte seu pedido</h2>
+            <p>Escolha seus hambúrgueres e confira o valor aqui.</p>
+        </div>
+
+        <div class="caixa-carrinho">
+            <ul id="lista-carrinho">
+                <li>Seu carrinho está vazio.</li>
+            </ul>
+
+            <div class="total">
+                <span>Total:</span>
+                <strong id="valor-total">R$ 0,00</strong>
+            </div>
+
+            <button class="botao finalizar" onclick="finalizarPedido()">
+                Finalizar pedido
+            </button>
+
+            <button class="limpar" onclick="limparCarrinho()">
+                Limpar carrinho
+            </button>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="sobre-imagem">
+            <img
+                src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"
+                alt="Hambúrguer preparado com ingredientes frescos"
+            >
+        </div>
+
+        <div class="sobre-texto">
+            <p class="destaque">QUEM SOMOS</p>
+
+            <h2>Mais sabor, menos complicação.</h2>
+
+            <p>
+                O Refúgio Lanches nasceu de uma ideia de dois amigos:
+                fazer hambúrguer de verdade, com bons ingredientes
+                e aquele sabor que faz a gente querer voltar.
+                Uma ideia autoral de Felipe e Antônio.
+            </p>
+
+            <p>
+                Nosso foco é preparar cada pedido com cuidado,
+                sem abrir mão do sabor e da qualidade.
+                Porque comer bem não precisa ser complicado.
+            </p>
+
+            <a href="#cardapio" class="botao">Ver o cardápio</a>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div>
+            <h2>🔥 Refúgio Lanches</h2>
+            <p>Um hambúrguer com amor, muda o seu dia.</p>
+        </div>
+
+        <div>
+            <h3>Contato</h3>
+            <p>WhatsApp: (41) 98740-9299</p>
+            <p>Instagram: @refugiolanchess</p>
+        </div>
+
+        <div>
+            <h3>Integrantes do projeto</h3>
+            <p>Felipe Marcelino de Lima</p>
+            <p>Antônio Marcos Pikissus Júnior</p>
+        </div>
+
+        <p class="copyright">
+            © 2026 Refúgio Lanches. Projeto acadêmico.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html
